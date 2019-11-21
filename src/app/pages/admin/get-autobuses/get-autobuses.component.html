@@ -1,0 +1,71 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="margin:20px auto;">
+      <div class="alert alert-info text-center"><strong>Autobuses list</strong></div>
+      <a  style="float: right" class="navbar-brand" class="btn btn-info bmd-btn-fab" href="/create-autobus"> <i class="fa fa-plus"></i> </a>
+    </div>
+    <div class="col-sm-4" *ngFor="let bus of buses; let i = index;" >
+      <div class="card text-black bg-success mb-3" style="max-width: 18rem;">   
+        <div class="card" >            
+          <div class="card-body">
+            <h5 class="card-title">Autobus: {{ bus.nombre_bus }} </h5> 
+            <p class="card-text"> <strong> Num acientos: </strong> {{ bus.num_acientos }} </p>
+          </div> 
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngIf="bus.tipo_bus === 1" ><strong>Tipo:</strong> Premier</li>
+            <li class="list-group-item" *ngIf="bus.tipo_bus === 2" ><strong>Tipo:</strong> Lite</li>
+            <li class="list-group-item" *ngIf="bus.tipo_bus === 3" ><strong>Tipo:</strong> Estandar</li>
+            <li class="list-group-item"><strong>Origen:</strong> {{ bus.lugar_salida }} </li>
+            <li class="list-group-item"><strong>Destino:</strong> {{ bus.lugar_destino }} </li>
+            <li class="list-group-item" *ngIf="bus.disponibilidad == true">Disponible</li>
+            <li class="list-group-item" *ngIf="bus.disponibilidad == false">No disponible</li>
+            <li class="list-group-item"><strong>Hora salida:</strong> {{ bus.horario_salida | date }} </li>
+            <li class="list-group-item"><strong>Tiempo de viaje:</strong> {{ bus.tiempo_viaje / 60 }} min</li>   
+          </ul>
+          <div class="card-body">
+            <button  type="button" class="btn btn-success" (click)="idBusSelected(bus)" ><i class="fa fa-edit"></i></button>
+            <button  type="button" class="btn btn-danger"
+            mwlConfirmationPopover
+            [popoverTitle]="popoverTitle"
+            [popoverMessage]="popoverMessage"
+            placement="left"
+            (confirm)="delete(bus)"
+            (cancel)="cancelClicked = true"><i class="fa fa-trash"></i></button>
+          </div> 
+        </div>                                          
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--div class="container">
+  <div class="row"   >
+    <div class="col-md-12" style="margin:20px auto;" >
+      <div class="alert alert-info text-center"><strong>Sale detail</strong></div>
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Product: {{productName}} </h5>
+          <p class="card-text"> {{dates | date}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>User:</strong> {{ userName }} </li>
+          <li class="list-group-item"><strong>Quantity:</strong> {{ quantity }} </li>
+          <li class="list-group-item"><strong>Discount:</strong> {{ discount }} </li>
+          <li class="list-group-item" *ngIf="payment == 1" > <strong>Payment method:</strong> Debito </li>
+          <li class="list-group-item" *ngIf="payment == 2" > <strong>Payment method:</strong> Credito </li>
+          <li class="list-group-item" *ngIf="payment == 3" > <strong>Payment method:</strong> Efectivo </li>
+          <li class="list-group-item"> <strong>Total: </strong> {{total}} </li>
+        </ul>
+        <div class="card-body">
+          <button *ngIf="status == true && !isAdmin " type="button" class="btn btn-info btn-sm" (click)="cancelSale()">Request cancellation</button>
+          <button *ngIf="status == false" type="button" class="btn btn-info btn-sm">Sale canceled</button>
+          <button *ngIf="isAdmin == true" type="button" class="btn btn-info btn-sm" (click)="cancel()">Cancel sale</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div-->
