@@ -1,34 +1,36 @@
-
-    <div class="col-md-12" style="margin:20px auto;">
-      <div class="alert alert-danger text-center">
+<div class="col-md-12" style="margin:20px auto;">
+    <div class="alert alert-danger text-center">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-item nav-link active">Viaje</a>
             <a class="nav-item nav-link">Acientos</a>
-            <a class="nav-item nav-link">Pago</a>  
-        </nav>      
-      </div>
+            <a class="nav-item nav-link">Pago</a>
+        </nav>
     </div>
+</div>
 
 
-<table class="table">
-    <thead class="table-success">
-        <tr>
-        <th scope="col">Tipo bus</th>
-        <th scope="col">Horario</th>
-        <th scope="col">Terminales</th>
-        <th scope="col">Duracion</th>
-        <th scope="col">Precio</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>        
-        <td *ngIf="tipo_bus == 1">Premier</td>
-        <td *ngIf="tipo_bus == 2">Lite</td>
-        <td *ngIf="tipo_bus == 3">Estándar</td>
-        <td> {{ horario_salida}} </td>    
-        <td>Central de Autobuses Tuxtla Gutierrez <br> Central de Autobuses - {{lugar_destino}}  </td>
-        <td> {{tiempo_viaje / 60 }} min </td> $ {{precio}}
-        <button  type="button" class="btn btn-success" (click)="selectAciento()" >Seleccionar</button>    
-        </tr>
-    </tbody>
-</table>
+<div class="col-md-12" style="margin: 20px auto; border-radius: 5px;">
+    <table class="table table-dark" style="border-radius: 5px;">
+        <thead>
+            <tr>
+                <th scope="col">Tipo bus</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Terminales</th>
+                <th scope="col">Duracion</th>
+                <th scope="col">Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td *ngIf="tipo_bus == 1">Premier</td>
+                <td *ngIf="tipo_bus == 2">Lite</td>
+                <td *ngIf="tipo_bus == 3">Estándar</td>
+                <td> {{ horario_salida}} </td>
+                <td>Central de Autobuses Tuxtla Gutierrez <br> Central de Autobuses - {{lugar_destino}} </td>
+                <td> {{tiempo_viaje}}</td> $ {{precio}}
+                <td><button type="button" class="btn btn-success" (click)="selectAciento()">Seleccionar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
