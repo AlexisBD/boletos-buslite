@@ -1,89 +1,131 @@
-
-    <div class="col-md-12" style="margin:20px auto;">
-      <div class="alert alert-danger text-center">
-        <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link active">Viaje</a>
-            <a class="nav-item nav-link active">Acientos</a>
-            <a class="nav-item nav-link">Pago</a>  
-        </nav>      
-      </div>
-    </div>
+<div class="col-md-12" style="margin:20px auto;">
+  <div class="alert alert-danger text-center">
+    <nav class="nav nav-pills nav-justified">
+      <a class="nav-item nav-link active">Viaje</a>
+      <a class="nav-item nav-link active">Acientos</a>
+      <a class="nav-item nav-link">Pago</a>
+    </nav>
+  </div>
+</div>
 
 
 <div class="container">
   <div class="row">
     <div class="col-md-8" style="margin:20px auto;">
       <div class="alert alert-info text-center"><strong>Selecciona tus acientos </strong></div>
-      <div class="card text-center ">  
+      <div class="card text-center ">
 
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Tu asiento</button>
-            <button type="button" class="btn btn-secondary">Disponible</button>
-            <button type="button" class="btn btn-danger">Ocupado</button>
+          <button type="button" class="btn btn-primary">Tu asiento</button>
+          <button type="button" class="btn btn-secondary">Disponible</button>
+          <button type="button" class="btn btn-danger">Ocupado</button>
         </div>
         <br>
-       <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">       
-        <div class="btn-group mr-2" role="group" aria-label="First group"> 
-            <button type="button" id="4" class="btn btn-secondary" (click)="setColor('4', '#8D8899')">4</button>
-            <button type="button" id="8" class="btn btn-secondary" (click)="setColor('8', '#8D8899')">8</button>
-            <button type="button" id="12" class="btn btn-secondary" (click)="setColor('12', '#8D8899')">12</button>
-            <button type="button" id="16" class="btn btn-secondary" (click)="setColor('16', '#8D8899')">16</button>
-            <button type="button" id="20" class="btn btn-secondary" (click)="setColor('20', '#8D8899')">20</button>
-            <button type="button" id="24" class="btn btn-secondary" (click)="setColor('24', '#8D8899')">24</button>
-            <button type="button" id="28" class="btn btn-secondary" (click)="setColor('28', '#8D8899')">28</button>
-            <button type="button" id="32" class="btn btn-secondary" (click)="setColor('32', '#8D8899')">32</button>
-            <button type="button" id="36" class="btn btn-secondary" (click)="setColor('36', '#8D8899')">36</button>
-            <button type="button" id="40" class="btn btn-secondary" (click)="setColor('40', '#8D8899')">40</button>
-        </div>      
-        </div>
+        <div>
+          <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" id="4" class="btn btn-secondary" (click)="setColor('4', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">04</button>
+              <button type="button" id="8" class="btn btn-secondary" (click)="setColor('8', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">08</button>
+              <button type="button" id="12" class="btn btn-secondary" (click)="setColor('12', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">12</button>
+              <button type="button" id="16" class="btn btn-secondary" (click)="setColor('16', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">16</button>
+              <button type="button" id="20" class="btn btn-secondary" (click)="setColor('20', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">20</button>
+              <button type="button" id="24" class="btn btn-secondary" (click)="setColor('24', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">24</button>
+              <button type="button" id="28" class="btn btn-secondary" (click)="setColor('28', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">28</button>
+              <button type="button" id="32" class="btn btn-secondary" (click)="setColor('32', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">32</button>
+              <button type="button" id="36" class="btn btn-secondary" (click)="setColor('36', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">36</button>
+              <button type="button" id="40" class="btn btn-secondary" (click)="setColor('40', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">40</button>
+            </div>
+          </div>
 
-        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" id="3" class="btn btn-secondary" (click)="setColor('3', '#8D8899')">3</button>
-            <button type="button" id="7" class="btn btn-secondary" (click)="setColor('7', '#8D8899')">7</button>
-            <button type="button" id="11" class="btn btn-secondary" (click)="setColor('11', '#8D8899')">11</button>
-            <button type="button" id="15" class="btn btn-secondary" (click)="setColor('15', '#8D8899')">15</button>
-            <button type="button" id="19" class="btn btn-secondary" (click)="setColor('19', '#8D8899')">19</button>
-            <button type="button" id="23" class="btn btn-secondary" (click)="setColor('23', '#8D8899')">23</button>
-            <button type="button" id="27" class="btn btn-secondary" (click)="setColor('27', '#8D8899')">27</button>
-            <button type="button" id="31" class="btn btn-secondary" (click)="setColor('31', '#8D8899')">31</button>
-            <button type="button" id="35" class="btn btn-secondary" (click)="setColor('35', '#8D8899')">35</button>
-            <button type="button" id="39" class="btn btn-secondary" (click)="setColor('39', '#8D8899')">39</button>
-        </div>      
+          <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" id="3" class="btn btn-secondary" (click)="setColor('3', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">03</button>
+              <button type="button" id="7" class="btn btn-secondary" (click)="setColor('7', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">07</button>
+              <button type="button" id="11" class="btn btn-secondary" (click)="setColor('11', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">11</button>
+              <button type="button" id="15" class="btn btn-secondary" (click)="setColor('15', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">15</button>
+              <button type="button" id="19" class="btn btn-secondary" (click)="setColor('19', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">19</button>
+              <button type="button" id="23" class="btn btn-secondary" (click)="setColor('23', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">23</button>
+              <button type="button" id="27" class="btn btn-secondary" (click)="setColor('27', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">27</button>
+              <button type="button" id="31" class="btn btn-secondary" (click)="setColor('31', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">31</button>
+              <button type="button" id="35" class="btn btn-secondary" (click)="setColor('35', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">35</button>
+              <button type="button" id="39" class="btn btn-secondary" (click)="setColor('39', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">39</button>
+            </div>
+          </div>
         </div>
-        
-        <br><br> 
+        <div style="margin-top: 70px;">
 
-        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" id="2" class="btn btn-secondary" (click)="setColor('2', '#8D8899')">2</button>
-            <button type="button" id="6" class="btn btn-secondary" (click)="setColor('6', '#8D8899')">6</button>
-            <button type="button" id="10" class="btn btn-secondary" (click)="setColor('10', '#8D8899')">10</button>
-            <button type="button" id="14" class="btn btn-secondary" (click)="setColor('14', '#8D8899')">14</button>
-            <button type="button" id="18" class="btn btn-secondary" (click)="setColor('18', '#8D8899')">18</button>
-            <button type="button" id="22" class="btn btn-secondary" (click)="setColor('22', '#8D8899')">22</button>
-            <button type="button" id="26" class="btn btn-secondary" (click)="setColor('26', '#8D8899')">26</button>
-            <button type="button" id="30" class="btn btn-secondary" (click)="setColor('30', '#8D8899')">30</button>
-            <button type="button" id="34" class="btn btn-secondary" (click)="setColor('34', '#8D8899')">34</button>
-            <button type="button" id="38" class="btn btn-secondary" (click)="setColor('38', '#8D8899')">38</button>
-        </div>      
-        </div>
+          <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" id="02" class="btn btn-secondary" (click)="setColor('2', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">02</button>
+              <button type="button" id="06" class="btn btn-secondary" (click)="setColor('6', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">06</button>
+              <button type="button" id="10" class="btn btn-secondary" (click)="setColor('10', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">10</button>
+              <button type="button" id="14" class="btn btn-secondary" (click)="setColor('14', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">14</button>
+              <button type="button" id="18" class="btn btn-secondary" (click)="setColor('18', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">18</button>
+              <button type="button" id="22" class="btn btn-secondary" (click)="setColor('22', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">22</button>
+              <button type="button" id="26" class="btn btn-secondary" (click)="setColor('26', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">26</button>
+              <button type="button" id="30" class="btn btn-secondary" (click)="setColor('30', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">30</button>
+              <button type="button" id="34" class="btn btn-secondary" (click)="setColor('34', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">34</button>
+              <button type="button" id="38" class="btn btn-secondary" (click)="setColor('38', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">38</button>
+            </div>
+          </div>
 
-        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" id="1" class="btn btn-secondary" (click)="setColor('1', '#8D8899')">1</button>
-            <button type="button" id="5" class="btn btn-secondary" (click)="setColor('5', '#8D8899')">5</button>
-            <button type="button" id="9" class="btn btn-secondary" (click)="setColor('9', '#8D8899')">9</button>
-            <button type="button" id="13" class="btn btn-secondary" (click)="setColor('13', '#8D8899')">13</button>
-            <button type="button" id="17" class="btn btn-secondary" (click)="setColor('17', '#8D8899')">17</button>
-            <button type="button" id="21" class="btn btn-secondary" (click)="setColor('21', '#8D8899')">21</button>
-            <button type="button" id="25" class="btn btn-secondary" (click)="setColor('25', '#8D8899')">25</button>
-            <button type="button" id="29" class="btn btn-secondary" (click)="setColor('29', '#8D8899')">29</button>
-            <button type="button" id="33" class="btn btn-secondary" (click)="setColor('33', '#8D8899')">33</button>
-            <button type="button" id="37" class="btn btn-secondary" (click)="setColor('37', '#8D8899')">37</button>
-        </div>      
+          <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" id="1" class="btn btn-secondary" (click)="setColor('1', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">01</button>
+              <button type="button" id="5" class="btn btn-secondary" (click)="setColor('5', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">05</button>
+              <button type="button" id="9" class="btn btn-secondary" (click)="setColor('9', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">09</button>
+              <button type="button" id="13" class="btn btn-secondary" (click)="setColor('13', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">13</button>
+              <button type="button" id="17" class="btn btn-secondary" (click)="setColor('17', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">17</button>
+              <button type="button" id="21" class="btn btn-secondary" (click)="setColor('21', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">21</button>
+              <button type="button" id="25" class="btn btn-secondary" (click)="setColor('25', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">25</button>
+              <button type="button" id="29" class="btn btn-secondary" (click)="setColor('29', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">29</button>
+              <button type="button" id="33" class="btn btn-secondary" (click)="setColor('33', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">33</button>
+              <button type="button" id="37" class="btn btn-secondary" (click)="setColor('37', '#8D8899')"
+                style="margin: 10px; border-radius: 110px;">37</button>
+            </div>
+          </div>
+          <a style="float: right" class="navbar-brand" class="btn btn-info bmd-btn-fab" href="/pago-boleto"> Aceptar
+          </a>
         </div>
-        <a  style="float: right" class="navbar-brand" class="btn btn-info bmd-btn-fab" href="/pago-boleto"> Aceptar </a>        
       </div>
     </div>
   </div>
