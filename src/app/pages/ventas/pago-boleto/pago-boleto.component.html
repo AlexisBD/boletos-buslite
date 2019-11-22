@@ -1,1 +1,109 @@
-<p>pago-boleto works!</p>
+    <div class="col-md-12" style="margin:20px auto;">
+      <div class="alert alert-danger text-center">
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-item nav-link active">Viaje</a>
+            <a class="nav-item nav-link active">Acientos</a>
+            <a class="nav-item nav-link active">Pago</a>  
+        </nav>      
+      </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto" style="margin:20px auto;">
+        <div class="alert alert-info text-center"><strong>Detalles de pago</strong></div>         
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <h1 >Informacion del cliente</h1>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label >Nombre:</label>
+                                    <input type="email" class="form-control" name="nombre_cliente" ngModel required>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label >Correo:</label>
+                                    <input type="email" class="form-control" name="telefono_cliente" ngModel required>
+                                </div>
+                            </div>
+
+                            <h1>Pago con tarjeta</h1>                            
+                            <div class="form-group">
+                                <label>Información de tarjeta:</label>
+                                <input type="text" class="form-control"  placeholder="1234 1234 1234 1234">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">                                    
+                                    <input type="text" class="form-control" placeholder="MM / AA">
+                                </div>
+                                
+                                <div class="form-group col-md-6">                                    
+                                    <input type="text" class="form-control" placeholder="CVC">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nombre en la tarjeta:</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <button style="float: right" type="submit" class="btn btn-primary">Pagar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Detalles del boleto</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Tipo boleto: </li>
+                            <li class="list-group-item">Autobus: </li>
+                            <li class="list-group-item">Fecha salida: </li>
+                            <li class="list-group-item">Nuemero de aciento: </li>
+                            <li class="list-group-item">Total: </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>    
+    </div>
+</div>
+
+
+<!--div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto" style="margin:20px auto;">
+            <div class="alert alert-info text-center"><strong>Encuentra tu boleto de autobús</strong></div> 
+            <div class="card text-black bg-success mb-3" style="max-width: 18rem;">   
+                <div class="card" >            
+                    <div class="card-body">
+                        <form #form="ngForm" (ngSubmit) = "buscarBus(form)" >                   
+                            
+                            <div class="form-group">
+                                <label><strong>Nombre:</strong></label>
+                                <input type="text"  name="nombre_bus" class="form-control" ngModel required >
+                                <label><strong>Telefono:</strong></label>
+                                <input type="number"  name="nombre_bus" class="form-control" ngModel required >
+                            </div> 
+
+                            <div class="form-group">
+                                <label><strong>Correo:</strong></label>
+                                <input type="email"  name="nombre_bus" class="form-control" ngModel required >
+                            </div>                                                                                 
+
+                            <div class="col-md-12 text-center ">
+                                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Buscar boleto</button>
+                            </div>
+
+                        </form>
+                    </div> 
+                </div>                                          
+            </div>
+        </div>
+    </div>    
+</div -->
