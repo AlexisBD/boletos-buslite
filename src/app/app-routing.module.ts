@@ -16,6 +16,8 @@ const routes: Routes = [
   { path: 'create-autobus', component: CreateAutobusesComponent },  
   { path: 'update-autobus', component: UpdateAutobusesComponent },
   { path: 'busqueda-boletos', component: BusquedaBoletoComponent },
+  { path: 'resultado-busqueda-boleto', component: ResultadoBusquedaBoletoComponent },
+  { path: 'reservacion-aciento', component: ReservacionAsientoComponent },
 ];
 
 @NgModule({
