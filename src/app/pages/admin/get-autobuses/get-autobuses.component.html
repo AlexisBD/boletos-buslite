@@ -41,31 +41,3 @@
   </div>
 </div>
 
-
-<!--div class="container">
-  <div class="row"   >
-    <div class="col-md-12" style="margin:20px auto;" >
-      <div class="alert alert-info text-center"><strong>Sale detail</strong></div>
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title">Product: {{productName}} </h5>
-          <p class="card-text"> {{dates | date}}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><strong>User:</strong> {{ userName }} </li>
-          <li class="list-group-item"><strong>Quantity:</strong> {{ quantity }} </li>
-          <li class="list-group-item"><strong>Discount:</strong> {{ discount }} </li>
-          <li class="list-group-item" *ngIf="payment == 1" > <strong>Payment method:</strong> Debito </li>
-          <li class="list-group-item" *ngIf="payment == 2" > <strong>Payment method:</strong> Credito </li>
-          <li class="list-group-item" *ngIf="payment == 3" > <strong>Payment method:</strong> Efectivo </li>
-          <li class="list-group-item"> <strong>Total: </strong> {{total}} </li>
-        </ul>
-        <div class="card-body">
-          <button *ngIf="status == true && !isAdmin " type="button" class="btn btn-info btn-sm" (click)="cancelSale()">Request cancellation</button>
-          <button *ngIf="status == false" type="button" class="btn btn-info btn-sm">Sale canceled</button>
-          <button *ngIf="isAdmin == true" type="button" class="btn btn-info btn-sm" (click)="cancel()">Cancel sale</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div-->
