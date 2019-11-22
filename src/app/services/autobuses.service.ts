@@ -7,6 +7,11 @@ import { Observable} from 'rxjs';
 })
 export class AutobusesService {
   busId
+  tipo_boleto
+  autobus
+  fecha_salida
+  num_asiento
+  total
   public ENDPOINT = 'https://khalifa-bus.herokuapp.com';
   private URL_API = this.ENDPOINT + '/api/';
 
@@ -69,5 +74,46 @@ export class AutobusesService {
 
   getBusId(){
     return this.busId;
+  }
+
+  /* DETALLES DEL BOLETO */
+  setTipoBoleto(tipo_boleto){
+    this.tipo_boleto = tipo_boleto
+  }
+
+  getTipoBoleto(){
+    return this.tipo_boleto;
+  }
+
+  setAutobus(autobus){
+    this.autobus = autobus
+  }
+
+  getAutobus(){
+    return this.autobus
+  }
+
+  setFechaSalida(fecha_salida){
+    this.fecha_salida = fecha_salida
+  }
+
+  getFechaSalida(){
+    return this.fecha_salida;
+  }
+
+  setNumAsiento(num_asiento){
+    this.num_asiento = num_asiento
+  }
+
+  getNumAsiento(){
+    return this.num_asiento;
+  }
+
+  setTotal(total){
+    this.total = total
+  }
+
+  getTotal(){
+    return this.total;
   }
 }
