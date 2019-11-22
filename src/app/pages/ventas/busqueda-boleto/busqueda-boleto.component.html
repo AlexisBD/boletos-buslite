@@ -1,1 +1,64 @@
-<p>busqueda-boleto works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+        <div id="first">
+            <div class="myform form ">
+            <div class="logo mb-3">
+                <div class="col-md-12 text-center">
+                    <h3>Encuentra tu boleto de autobús</h3>
+                </div>
+            </div>
+
+        <form #form="ngForm" (ngSubmit) = "buscarBus(form)" >                   
+          
+          <div class="form-group">
+            <label>Lugar de origen:</label>
+            <select name="lugar_destino"  class="custom-select" ngModel required>
+                <option selected></option>
+                <option value="1">Tuxtla Gutierrez</option>                
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Lugar de destino:</label>
+             <select name="lugar_destino"  class="custom-select" ngModel required>
+                <option selected></option>
+                <option value="1">Comitan</option>
+                <option value="2">Comalapa</option>
+                <option value="3">Cintalapa</option>
+                <option value="4">Chicumuselo</option>                
+                <option value="5">Motozintla</option>           
+                <option value="6">Ocosingo</option> 
+                <option value="7">Palenque</option>                 
+                <option value="8">San Cristobal</option>               
+                <option value="9">Suchiapa</option> 
+                <option value="10">Tapachula</option>              
+            </select>
+          </div>
+         
+
+          <div class="form-group">  
+            <label>Fecha de salida:</label><br>             
+            Fecha:             
+            <input class="form-control" type="date" name="fecha_salida" ngModel required> <br>  
+            Hora:         
+            <input class="form-control" type="time" name="hora_salida"  ngModel required>
+          </div>
+
+          <div class="form-group">
+            <label>Fecha de regreso (Opcional) </label> <br>            
+            Fecha:             
+            <input class="form-control" type="date" name="fecha_salida" ngModel required> <br>  
+            Hora:         
+            <input class="form-control" type="time" name="hora_salida"  ngModel required>           
+          </div>
+
+          <div class="col-md-12 text-center ">
+            <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Buscar boleto</button>
+          </div>
+
+        </form>
+      </div>
+	</div>
+</div>

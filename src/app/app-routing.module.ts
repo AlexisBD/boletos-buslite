@@ -10,10 +10,12 @@ import { GetAutobusesComponent } from './pages/admin/get-autobuses/get-autobuses
 import { CreateAutobusesComponent } from './pages/admin/create-autobuses/create-autobuses.component';
 import { UpdateAutobusesComponent } from './pages/admin/update-autobuses/update-autobuses.component';
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'busqueda-boletos' },
   { path: 'login', component: LoginComponent },
   { path: 'list-autobuses', component: GetAutobusesComponent },
   { path: 'create-autobus', component: CreateAutobusesComponent },  
   { path: 'update-autobus', component: UpdateAutobusesComponent },
+  { path: 'busqueda-boletos', component: BusquedaBoletoComponent },
 ];
 
 @NgModule({

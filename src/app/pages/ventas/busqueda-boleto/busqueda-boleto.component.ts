@@ -12,4 +12,7 @@ export class BusquedaBoletoComponent implements OnInit {
   ngOnInit() {
   }
 
+  buscarBus(form) {
+    
+  }
 }
