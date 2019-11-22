@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'busqueda-boletos', component: BusquedaBoletoComponent },
   { path: 'resultado-busqueda-boleto', component: ResultadoBusquedaBoletoComponent },
   { path: 'reservacion-aciento', component: ReservacionAsientoComponent },
+  { path: 'pago-boleto', component: PagoBoletoComponent },
 ];
 
 @NgModule({
