@@ -18,8 +18,8 @@ export class AutobusesService {
   private URL_API = this.ENDPOINT + '/api/';
   /* pagos */
   //public ENDPOINT_EXPRESS = 'http://ec2-54-211-24-42.compute-1.amazonaws.com:3008/boletos/';  
-  //public ENDPOINT_EXPRESS = 'http://54.211.24.42:3000';   
-  public ENDPOINT_EXPRESS = 'http://192.168.0.17:3000';   
+  public ENDPOINT_EXPRESS = 'http://54.211.24.42:3000';   
+  //public ENDPOINT_EXPRESS = 'http://192.168.0.17:3000';   
   public ENDPOINT_PAGO = '192.168.0.17:4242/create-payment-intent'
 
   constructor( public http: HttpClient ) { }
