@@ -23,6 +23,8 @@
     "angular-confirmation-popover": "^4.2.1",
     "bootstrap": "^4.3.1",
     "rxjs": "~6.4.0",
+    "stripe-angular": "^0.6.1",
+    "stripe-checkout-custom-form": "^1.0.2",
     "sweetalert2": "^9.3.16",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

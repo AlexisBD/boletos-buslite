@@ -15,7 +15,8 @@
             <div class="col-sm-8">
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        
+                        <form #form="ngForm" (ngSubmit) = "pagar(form)" >      
                             <h1 >Informacion del cliente</h1>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -25,31 +26,29 @@
 
                                 <div class="form-group col-md-6">
                                     <label >Correo:</label>
-                                    <input type="email" class="form-control" name="telefono_cliente" ngModel required>
+                                    <input type="email" class="form-control" name="correo_cliente" ngModel required>
                                 </div>
                             </div>
 
                             <h1>Pago con tarjeta</h1>                            
                             <div class="form-group">
                                 <label>Información de tarjeta:</label>
-                                <input type="text" class="form-control"  placeholder="1234 1234 1234 1234">
+                                <input type="text" size="20" class="form-control" name="card_number"  data-stripe="number" placeholder="1234 1234 1234 1234"ngModel required>
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-6">                                    
-                                    <input type="text" class="form-control" placeholder="MM / AA">
+                                <div class="form-group col-md-4">                                    
+                                    <input type="text" size="2" class="form-control" name="expiry_month"  data-stripe="exp_month" placeholder="MM"ngModel required> 
+                                </div>
+
+                                <div class="form-group col-md-4">                                    
+                                    <input type="text" size="2" class="form-control"  name="expiry_year" data-stripe="exp_year" placeholder="AA" ngModel required>
                                 </div>
                                 
-                                <div class="form-group col-md-6">                                    
-                                    <input type="text" class="form-control" placeholder="CVC">
+                                <div class="form-group col-md-4">                                    
+                                    <input type="text" size="4" class="form-control"  name="cvc"  data-stripe="cvc" placeholder="CVC" ngModel required>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Nombre en la tarjeta:</label>
-                                <input type="text" class="form-control">
-                            </div>
-
+                            </div>                            
                             <button style="float: right" type="submit" class="btn btn-primary">Pagar</button>
                         </form>
                     </div>
@@ -60,11 +59,14 @@
                     <div class="card-body">
                         <h5 class="card-title">Detalles del boleto</h5>
                         <ul class="list-group">
-                            <li class="list-group-item">Tipo boleto: </li>
-                            <li class="list-group-item">Autobus: </li>
-                            <li class="list-group-item">Fecha salida: </li>
-                            <li class="list-group-item">Nuemero de aciento: </li>
-                            <li class="list-group-item">Total: </li>
+                            <li class="list-group-item" *ngIf="tipoBoleto == 1"><strong>Tipo boleto:</strong> Sencillo </li>
+                            <li class="list-group-item" *ngIf="tipoBoleto == 2"><strong>Tipo boleto:</strong> Redondo </li>                            
+                            <li class="list-group-item" *ngIf="tipoAutobus == 1"><strong>Autobus:</strong> Premier </li>
+                            <li class="list-group-item" *ngIf="tipoAutobus == 2"><strong>Autobus:</strong> Lite </li>
+                            <li class="list-group-item" *ngIf="tipoAutobus == 3"><strong>Autobus:</strong> Estándar </li>                            
+                            <li class="list-group-item"><strong>Fecha salida:</strong> {{fechaSalida}} </li>
+                            <li class="list-group-item"><strong>Numero de aciento:</strong> {{numAciento}} </li>
+                            <li class="list-group-item"><strong>Total:</strong>  {{total}} </li>
                         </ul>
                     </div>
                 </div>

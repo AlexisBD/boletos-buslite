@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AutobusesService } from '../../../services/autobuses.service';
 import {  Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
 import Swal from 'sweetalert2'
 
 @Component({
@@ -18,8 +17,7 @@ export class LoginComponent implements OnInit {
     'password': '',    
   }
   constructor(
-    public api: AutobusesService,
-    public formBuilder: FormBuilder,
+    public api: AutobusesService,    
     private router: Router,
   ) { }
 

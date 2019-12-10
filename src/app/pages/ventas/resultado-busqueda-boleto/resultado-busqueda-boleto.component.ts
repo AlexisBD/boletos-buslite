@@ -12,7 +12,7 @@ export class ResultadoBusquedaBoletoComponent implements OnInit {
   horario_salida;
   lugar_destino;
   tipo_bus;
-  tiempo_viaje;  
+  tiempo_viaje;   
   costo;
   tipoBoleto = 1;
   precio;
@@ -21,11 +21,12 @@ export class ResultadoBusquedaBoletoComponent implements OnInit {
     private router: Router,
   ) { }
   ngOnInit() {
-    this.getByIdBus();    
+    this.getByIdBus(); 
+    this.api.setTipoBoleto(this.tipoBoleto);
   }
 
   getByIdBus() {
-    this.busId = this.api.getBusId();
+    this.busId = this.api.getBusId();    
     this.api.getAutobusById(this.busId).subscribe(
       (data) => {
         console.log(data);
@@ -35,7 +36,9 @@ export class ResultadoBusquedaBoletoComponent implements OnInit {
         this.tiempo_viaje = this.viaje(data["tiempo_viaje"]);
         this.costo = data["costo"];        
         this.precio = this.calcularPrecio(this.tipo_bus, parseFloat(this.costo)).toFixed(2);
-
+        this.api.setCosto(this.costo);
+        this.api.setTotal(this.precio)
+        this.api.setBusIdL(this.tipo_bus);
       },(error) => {
         console.log(error.error);
                 
@@ -68,6 +71,7 @@ export class ResultadoBusquedaBoletoComponent implements OnInit {
   // 2019-11-13T18:00:00-06:00 /*horarioBD*/
   horaFecha(horarioBD){
     var fecha = horarioBD.slice(0,10);
+    this.api.setFechaSalida(fecha);
     var hora  = horarioBD.slice(11,19);
     var form  = "Fecha: " + fecha + " Hora: " + hora;
     return form;

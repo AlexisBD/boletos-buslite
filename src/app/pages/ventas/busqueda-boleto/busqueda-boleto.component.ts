@@ -20,6 +20,7 @@ export class BusquedaBoletoComponent implements OnInit {
     this.busId = form.value.lugar_destino
     console.log(this.busId)
     this.api.setBusId(this.busId);
+    this.api.setBusIdL(this.busId);
     this.router.navigate(['/resultado-busqueda-boleto']);
   }
 }

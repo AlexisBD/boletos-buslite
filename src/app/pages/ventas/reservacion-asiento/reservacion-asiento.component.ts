@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AutobusesService } from '../../../services/autobuses.service';
 @Component({
   selector: 'app-reservacion-asiento',
   templateUrl: './reservacion-asiento.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservacionAsientoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public api: AutobusesService
+  ) { }
 
   ngOnInit() {
+    let busId = this.api.getBusIdL();
+    console.log("LC", busId);
+    
   }
   
   setColor(btn, color) {

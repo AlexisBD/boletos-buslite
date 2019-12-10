@@ -16,11 +16,11 @@ export class CreateAutobusesComponent implements OnInit {
     'num_acientos_ocupados': 0  
   }
   horario_salida;
-  horario_regreso;
+  horario_regreso; 
   constructor(
     public api: AutobusesService,
     private router: Router,
-  ) { }
+  ) { } 
 
   ngOnInit() {
   }
